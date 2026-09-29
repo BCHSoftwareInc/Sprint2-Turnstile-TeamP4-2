@@ -4,7 +4,7 @@ Copy each story below into a GitHub issue (title = the heading line, body = ever
 ---
 
 ## [SE] Story 1 - Gate decision engine
-**Owner:** SE  **Label:** SE  **File:** `app/src/main/java/com/example/turnstile/GateRules.kt`
+**Owner:** SE (Kingston)  **Label:** SE  **File:** `app/src/main/java/com/example/turnstile/GateRules.kt`
 
 As Apex Entertainment, I need the Vortex turnstile to decide who may ride, so that no one unsafe gets on.
 
@@ -18,7 +18,7 @@ As Apex Entertainment, I need the Vortex turnstile to decide who may ride, so th
 ---
 
 ## [SE] Story 2 - Turnstile gate, counters and front end
-**Owner:** SE  **Label:** SE  **Files:** `app/src/main/java/com/example/turnstile/TurnstileGate.kt`, `app/src/main/java/com/example/turnstile/MainActivity.kt`
+**Owner:** SE (Kingston)  **Label:** SE  **Files:** `app/src/main/java/com/example/turnstile/TurnstileGate.kt`, `app/src/main/java/com/example/turnstile/MainActivity.kt`
 
 As the ride operator, I need to scan riders one after another and see today's granted/denied totals.
 
@@ -32,7 +32,7 @@ As the ride operator, I need to scan riders one after another and see today's gr
 ---
 
 ## [QA] Story 3 - Boundary test suite
-**Owner:** QA  **Label:** QA  **File:** `app/src/test/java/com/example/turnstile/QaBoundaryTest.kt`
+**Owner:** QA (Xavier)  **Label:** QA  **File:** `app/src/test/java/com/example/turnstile/QaBoundaryTest.kt`
 
 As QA, I need automated tests at every rule boundary so a bad change is caught the moment it is made.
 
@@ -46,7 +46,7 @@ As QA, I need automated tests at every rule boundary so a bad change is caught t
 ---
 
 ## [CCA] Story 4 - Security audit: AI-suggested code vs. our code
-**Owner:** CCA  **Label:** CCA  **File:** `app/src/test/java/com/example/turnstile/CcaSecurityTest.kt`
+**Owner:** CCA (Subhanik) **Label:** CCA  **File:** `app/src/test/java/com/example/turnstile/CcaSecurityTest.kt`
 
 As CCA, I need proof - not opinions - that the AI-suggested gate code in `AiSuggestedGate.kt` is unsafe, and that our code is safe.
 
