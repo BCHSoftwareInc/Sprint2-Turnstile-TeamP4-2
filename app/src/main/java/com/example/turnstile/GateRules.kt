@@ -26,20 +26,31 @@ object GateRules {
 
     fun checkEntry(ticketType: String?, heightIn: Double, age: Int, hasGuardian: Boolean): String {
         // Check the rules IN THIS ORDER. The first rule that matches wins - return right away.
-
+        //val result = ""
         // TODO Rule 1: if ticketType is not "PATRON" and not "VIP" -> return "DENIED_NO_TICKET"
-
+        if (ticketType != "PATRON" && ticketType != "VIP") {
+            return "DENIED_NO_TICKET"
+        }
         // TODO Rule 2: if heightIn <= 0, or heightIn > MAX_HEIGHT_IN,
         //              or age < 0, or age > MAX_AGE            -> return "DENIED_INVALID"
-
+        if (heightIn <= 0 || heightIn > MAX_HEIGHT_IN || age < 0 || age > MAX_AGE) {
+            return "DENIED_INVALID"
+        }
         // TODO Rule 3: if heightIn < MIN_HEIGHT_IN              -> return "DENIED_TOO_SHORT"
         //              (VIPs are NOT exempt - this is a physical safety rule)
-
+        if (heightIn < MIN_HEIGHT_IN) {
+            return "DENIED_TOO_SHORT"
+        }
         // TODO Rule 4: if age < MIN_SOLO_AGE AND there is no guardian -> return "DENIED_NEEDS_GUARDIAN"
-
+        if (age < MIN_SOLO_AGE && !hasGuardian) {
+            return "DENIED_NEEDS_GUARDIAN"
+        }
         // TODO Rule 5: if ticketType is "VIP" -> return "GRANTED_VIP", otherwise return "GRANTED"
-
-        return "TODO"
+        if (ticketType == "VIP") {
+            return "GRANTED_VIP"
+        } else {
+            return "GRANTED"
+        }
     }
 
     fun isGranted(resultCode: String): Boolean = resultCode.startsWith("GRANTED")
